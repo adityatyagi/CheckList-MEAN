@@ -15,3 +15,32 @@ THIS IS THE STURCTURE OF THE FOLLOWING MEAN APPLICATION.
 
 - package.json      <!-- npm configuration to install dependencies/modules -->
 - server.js         <!-- Node configuration -->
+
+
+FRONTEND
+
+- public
+----js
+--------controllers
+------------main.js
+--------services
+------------todos.js
+
+----app.js
+
+- index.html
+
+1. The services is developed first.
+    The to-do service is meant to interact with our Node API. 
+    We want to have all the code to get, create, or delete a to-do inside our service. 
+    This ensures that we can test this code separate of our overall application.
+
+    We have defined our service using .factory with three different functions. get, create and delete will all
+    return "promise objects" that we can use in our controller.
+
+    Declaring Services 
+    There are many different ways to declare a service (.service, .factory and .provider). 
+    https://stackoverflow.com/questions/13937318/convert-angular-http-get-function-to-a-service
+
+2. Controllers
+    We create our angular module for our controller.
